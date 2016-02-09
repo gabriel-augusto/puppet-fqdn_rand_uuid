@@ -1,0 +1,3 @@
+fixtures:
+  symlinks:
+    fqdn_rand_uuid: "#{source_dir}"
