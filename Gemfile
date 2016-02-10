@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :development, :unit_tests do
   gem 'puppetlabs_spec_helper', :require => false
