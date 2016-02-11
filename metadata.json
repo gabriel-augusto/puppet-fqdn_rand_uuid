@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Olav Morken",
   "license": "MIT",
-  "summary": "Generate UUIDs based on the FQDN and a seed value"
+  "summary": "Generate UUIDs based on the FQDN and a seed value",
   "source": "https://github.com/olavmrk/puppet-fqdn_rand_uuid",
   "project_page": "https://github.com/olavmrk/puppet-fqdn_rand_uuid",
   "issues_url": "https://github.com/olavmrk/puppet-fqdn_rand_uuid/issues",
