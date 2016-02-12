@@ -8,7 +8,7 @@
   "project_page": "https://github.com/olavmrk/puppet-fqdn_rand_uuid",
   "issues_url": "https://github.com/olavmrk/puppet-fqdn_rand_uuid/issues",
   "tags": ["uuid"],
-  "dependencies": [
+  "requirements": [
     {
       "name": "puppet",
       "version_requirement": ">=3.1"
