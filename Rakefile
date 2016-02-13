@@ -4,7 +4,7 @@ require 'json'
 require 'yaml'
 
 desc 'Release task for running on Travis CI'
-task :travis_release => :validate do
+task :travis_release => [ :validate, :clean, :build ] do
 
   target_version = ENV['TRAVIS_TAG']
   if target_version.nil? or target_version.empty?
