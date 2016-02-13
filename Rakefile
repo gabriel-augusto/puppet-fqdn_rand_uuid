@@ -6,7 +6,7 @@ desc 'Release task for running on Travis CI'
 task :travis_release => :validate do
 
   target_version = ENV['TRAVIS_TAG']
-  if target_version.nil?
+  if target_version.nil? or target_version.empty?
     puts 'Not a build for a tag, not doing a release'
     exit
   end
