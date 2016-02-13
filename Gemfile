@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 group :development, :unit_tests do
   gem 'puppetlabs_spec_helper', :require => false
+  gem 'puppet-blacksmith', :require => false
   gem 'rspec-puppet', :require => false
 end
 
