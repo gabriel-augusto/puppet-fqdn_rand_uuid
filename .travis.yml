@@ -1,6 +1,6 @@
 ---
 language: ruby
-script: "bundle exec rake spec"
+script: "bundle exec rake validate spec"
 matrix:
   include:
   - rvm: 2.3.0
