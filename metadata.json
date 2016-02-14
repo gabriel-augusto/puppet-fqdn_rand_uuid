@@ -7,5 +7,6 @@
   "source": "https://github.com/olavmrk/puppet-fqdn_rand_uuid",
   "project_page": "https://github.com/olavmrk/puppet-fqdn_rand_uuid",
   "issues_url": "https://github.com/olavmrk/puppet-fqdn_rand_uuid/issues",
-  "tags": ["uuid"]
+  "tags": ["uuid"],
+  "dependencies": []
 }
