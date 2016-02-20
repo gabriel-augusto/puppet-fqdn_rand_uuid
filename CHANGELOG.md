@@ -11,7 +11,7 @@ This file documents the various versions of this module.
 - Fixes for the release scripts, which should enable a more streamlined release process.
 
 0.0.1 - 2016-02-13
---------------------
+------------------
 
 First release of this module.
 
