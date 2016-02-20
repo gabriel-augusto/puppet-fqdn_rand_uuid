@@ -12,6 +12,8 @@
 The fqdn_rand_uuid module provides the `fqdn_rand_uuid($seed)`-function.
 This function is used to generate UUIDs that are scoped to the node.
 
+By providing different values for `$seed`, multiple UUIDs can be generated.
+
 ## Setup
 
 Installing this module makes the `fqdn_rand_uuid($seed)`-function available.
@@ -20,7 +22,8 @@ Installing this module makes the `fqdn_rand_uuid($seed)`-function available.
 
 This function is called with a seed value.
 The FQDN of the node combined with the seed value is used to generate the UUID.
-The returned UUID is in the form of a string (e.g. "1d839dea-5e10-5243-88eb-e66815bd7d5c").
+The returned UUID is in the form of a string, without curly braces.
+(E.g. "1d839dea-5e10-5243-88eb-e66815bd7d5c").
 
 Example:
 
@@ -29,7 +32,17 @@ Example:
 
 ## Reference
 
-This module generates a version 5 UUID in its own custom namespace.
+This module generates a [version 5 UUID](https://tools.ietf.org/html/rfc4122#section-4.3) in its own custom namespace.
 The namespace used is `0b7a81ff-db8d-42fe-8d9f-768ea5b8ed1a`.
 
 The input to the UUID generator is the FQDN followed by a null byte followed by the seed value.
+
+The equivalent Python code to generate the UUID is:
+
+```
+import uuid
+def fqdn_rand_uuid(fqdn, seed):
+    namespace = uuid.UUID('0b7a81ff-db8d-42fe-8d9f-768ea5b8ed1a')
+    name = fqdn + '\0' + seed
+    return str(uuid.uuid5(namespace, name))
+```
