@@ -24,15 +24,15 @@ module Puppet::Parser::Functions
 
     fqdn = lookupvar('::fqdn')
 
-    instance = args[0]
-    unless instance.is_a?(String)
+    seed = args[0]
+    unless seed.is_a?(String)
       raise(Puppet::ParseError, 'fqdn_rand_uuid(): seed argument must be a string')
     end
 
     # The UUID for our namespace (0b7a81ff-db8d-42fe-8d9f-768ea5b8ed1a)
     ns_uuid = "\x0b\x7a\x81\xff\xdb\x8d\x42\xfe\x8d\x9f\x76\x8e\xa5\xb8\xed\x1a"
 
-    hash_input = ns_uuid + fqdn + "\x00" + instance
+    hash_input = ns_uuid + fqdn + "\x00" + seed
     hash = Digest::SHA1.digest(hash_input)
     hash = hash.bytes.to_a
 
