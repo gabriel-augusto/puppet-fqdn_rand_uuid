@@ -4,6 +4,7 @@ describe 'fqdn_rand_uuid' do
 
   context "Invalid parameters" do
     it { should run.with_params().and_raise_error(ArgumentError, /Wrong number of arguments given/) }
+    it { should run.with_params('a', 'b').and_raise_error(ArgumentError, /Wrong number of arguments given/) }
     it { should run.with_params(15).and_raise_error(Puppet::ParseError, /seed argument must be a string/) }
   end
 
