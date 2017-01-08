@@ -6,6 +6,7 @@ group :development, :unit_tests do
   gem 'puppet-blacksmith', :require => false
   gem 'rspec-puppet', :require => false
   gem 'json_pure', '<= 2.0.1', :require => false if RUBY_VERSION.split('.')[0] == '1'
+  gem 'json', '< 2', :require => false if RUBY_VERSION.split('.')[0] == '1'
 end
 
 if ENV['PUPPET_GEM_VERSION']
